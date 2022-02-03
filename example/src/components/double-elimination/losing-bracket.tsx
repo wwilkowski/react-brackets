@@ -6,11 +6,11 @@ interface LosingProps {
 }
 
 const LosingBracket: React.FC<LosingProps> = ({ rounds: losing }) => {
-  const RenderLosingSeed = ({ breakpoint, roundIdx, seed }: RenderSeedProps) => {
+  const RenderLosingSeed = ({ breakpoint, roundIndex: roundIdx, seed }: RenderSeedProps) => {
     const isLineConnector = losing[roundIdx].seeds.length === losing[roundIdx + 1]?.seeds.length;
     const Wrapper = isLineConnector ? SingleLineSeed : Seed;
     return (
-      <Wrapper mobileBreakpoint={breakpoint}>
+      <Wrapper mobileBreakpoint={breakpoint} noOfTeams={2} matchesInRound={losing.length}>
         <SeedItem style={{ width: '100%' }}>
           <div>
             <SeedTeam>{seed.teams?.[0]?.name || '-----------'}</SeedTeam>

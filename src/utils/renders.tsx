@@ -7,9 +7,9 @@ import { RenderSeedProps } from '../brackets';
 export const renderTitle = (title: ReactNode) => <RoundTitle>{title}</RoundTitle>;
 
 /* ------------------------- default seed component ------------------------- */
-export const renderSeed = ({ seed, breakpoint }: RenderSeedProps) => {
+export const renderSeed = ({ seed, breakpoint, noOfTeams, matchesInRound }: RenderSeedProps) => {
   return (
-    <Seed mobileBreakpoint={breakpoint}>
+    <Seed mobileBreakpoint={breakpoint} noOfTeams={noOfTeams} matchesInRound={matchesInRound}>
       <SeedItem>
         <div>
           <SeedTeam>{seed.teams?.[0]?.name || '-----------'}</SeedTeam>

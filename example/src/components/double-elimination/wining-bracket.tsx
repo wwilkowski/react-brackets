@@ -14,6 +14,8 @@ const WiningBracket: React.FC<LosingProps> = ({ rounds: wining }) => {
         }}
         className='custom-border'
         mobileBreakpoint={breakpoint}
+        matchesInRound={wining.length}
+        noOfTeams={2}
       >
         <SeedItem style={{ width: '100%' }}>
           <div>

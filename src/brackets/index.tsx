@@ -9,6 +9,8 @@ export interface RenderSeedProps {
   breakpoint: number;
   roundIndex: number;
   seedIndex: number;
+  noOfTeams: number;
+  matchesInRound: number;
 }
 
 export interface SingleEliminationProps {
@@ -56,7 +58,14 @@ const SingleElimination = ({
       <SeedsList>
         {round.seeds.map((seed, idx) => (
           <Fragment key={idx}>
-            {renderSeedComponent({ seed, breakpoint: mobileBreakpoint, roundIndex: roundIdx, seedIndex: idx })}
+            {renderSeedComponent({
+              seed,
+              breakpoint: mobileBreakpoint,
+              roundIndex: roundIdx,
+              seedIndex: idx,
+              matchesInRound: round.seeds.length,
+              noOfTeams: seed.teams?.length || 0,
+            })}
           </Fragment>
         ))}
       </SeedsList>

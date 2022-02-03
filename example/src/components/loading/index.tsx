@@ -29,7 +29,7 @@ const loadingData = [
   },
 ];
 
-const RenderLoadingSeed = ({ seed, breakpoint }: RenderSeedProps) => {
+const RenderLoadingSeed = ({ seed, breakpoint, matchesInRound }: RenderSeedProps) => {
   return (
     <Seed
       // style={{
@@ -38,6 +38,7 @@ const RenderLoadingSeed = ({ seed, breakpoint }: RenderSeedProps) => {
       // }}
       mobileBreakpoint={breakpoint}
       className='test'
+      matchesInRound={matchesInRound}
     >
       <SeedItem className='skeleton-item'>
         <div>

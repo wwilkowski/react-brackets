@@ -95,7 +95,7 @@ because we need to let the bracket tree to have a consitent design
 import { Bracket, RoundProps, Seed, SeedItem, SeedTeam, RenderSeedProps } from 'react-brackets';
 import React from 'react';
 
-const CustomSeed = ({seed, breakpoint, roundIndex, seedIndex}: RenderSeedProps) => {
+const CustomSeed = ({ seed, breakpoint, roundIndex, seedIndex }: RenderSeedProps) => {
   // breakpoint passed to Bracket component
   // to check if mobile view is triggered or not
 
@@ -124,7 +124,7 @@ How about if I want to use this component for double elimination losing bracket?
 import { Bracket, RoundProps, Seed, SingleLineSeed, SeedItem, SeedTeam, RenderSeedProps } from 'react-brackets';
 import React from 'react';
 
-const CustomSeed = ({seed, breakpoint, roundIndex, seedIndex}: RenderSeedProps) => {
+const CustomSeed = ({ seed, breakpoint, roundIndex, seedIndex }: RenderSeedProps) => {
   // ------ assuming rounds is the losers brackets rounds ------
   // losers rounds usually got some identical seeds amount like (2 - 2 - 1 - 1)
 
